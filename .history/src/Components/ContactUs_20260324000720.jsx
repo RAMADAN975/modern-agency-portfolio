@@ -1,0 +1,21 @@
+import React from 'react'
+import assets from '../assets/assets'
+
+const ContactUs = () => {
+    return (
+        <div id='contact-us' className=''>
+            <Title title='Reach out to us' desc='From strategy to execution, we craft digital solutions that move your business forward.' />
+            <form>
+                <div>
+                    <p className=''>Your name</p>
+                    <div className=''>
+                        <img src={assets.person_icon} alt="" />
+                        <input type="text" placeholder='Enter your name' className='' />
+                    </div>
+                </div>
+            </form>
+        </div>
+    )
+}
+
+export default ContactUs

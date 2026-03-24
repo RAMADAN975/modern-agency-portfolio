@@ -1,0 +1,144 @@
+/* ✅ الخط الصحيح */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;600&family=Manrope:wght@400;500;700&display=swap');
+
+* {
+  font-family: "Manrope", sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ✅ smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 2. تنسيق الـ Navbar العام */
+.nav-container {
+  padding-left: 5%;
+  padding-right: 5%;
+  height: 85px;
+}
+
+.blur-nav {
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(150, 150, 150, 0.1);
+}
+
+/* ألوان الخلفية حسب الثيم (بوتستراب 5.3) */
+[data-bs-theme="light"] .blur-nav {
+  background-color: rgba(255, 255, 255, 0.85);
+}
+
+[data-bs-theme="dark"] .blur-nav {
+  background-color: rgba(17, 24, 39, 0.85);
+}
+
+/* 3. اللوجو والروابط */
+.logo-img {
+  width: 8.5rem;
+}
+
+@media (min-width: 576px) {
+  .logo-img {
+    width: 10rem;
+  }
+
+  .nav-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+.nav-link-custom {
+  font-weight: 500;
+  opacity: 0.8;
+  transition: 0.2s;
+}
+
+.nav-link-custom:hover {
+  opacity: 1;
+  color: #5044E5 !important;
+}
+
+/* 4. القائمة الجانبية للموبايل (Mobile Sidebar) */
+@media (max-width: 575.98px) {
+  .mobile-sidebar {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 1050;
+    background-color: #5044E5;
+    /* لون الـ Primary */
+    color: white !important;
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    padding-top: 6rem;
+  }
+
+  .sidebar-closed {
+    width: 0;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .sidebar-open {
+    width: 260px;
+    padding-left: 2.5rem;
+    opacity: 1;
+  }
+
+  .mobile-sidebar a {
+    color: white !important;
+    font-size: 1.2rem;
+  }
+}
+
+/* هذا الكلاس هو المسؤول عن تلوين الكلمة */
+.text-gradient {
+  /* التدرج اللوني من البنفسجي/الأزرق إلى الأزرق الفاتح */
+  background: linear-gradient(to right, #5044E5, #4d8cea);
+
+  /* هذه الأسطر هي التي تجعل اللون يظهر "داخل" الحروف فقط */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+
+  display: inline-block;
+  /* لضمان عمل التدرج بشكل صحيح */
+}
+
+/* عندما يكون السمة dark، أي عنصر يحمل هذا الكلاس سيختفي */
+[data-bs-theme="dark"] .d-dark-none {
+  display: none !important;
+}
+
+/* تنسيق الصورة الزرقاء في الوضع الفاتح فقط */
+.hero-bg-decor {
+  position: absolute;
+  top: -100px;
+  right: -100px;
+  z-index: -1;
+  width: 800px;
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* لضمان أن الشعارات تظهر بألوانها الأصلية القوية 100% */
+.container img {
+  filter: none !important;
+  opacity: 1 !important;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.container img:hover {
+  transform: scale(1.1);
+}
+
+/* في الوضع الليلي نجعلها ساطعة قليلاً لتبدو واضحة */
+[data-bs-theme="dark"] .container img {
+  filter: brightness(1.2);
+}
