@@ -6,15 +6,6 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-body {
-  overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
-
-}
-
 /* 2. تنسيق الـ Navbar العام */
 .nav-container {
   padding-left: 5%;

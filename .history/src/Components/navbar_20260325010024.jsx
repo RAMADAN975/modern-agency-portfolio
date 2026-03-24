@@ -27,7 +27,7 @@ const Navbar = ({ theme, setTheme }) => {
                     onClick={() => setSidebarOpen(false)}
                 />
 
-                <a onClick={() => setSidebarOpen(false)} href="#" className="text-decoration-none text-reset nav-link-custom">Home</a>
+                <a onClick={() => setSidebarOpen(false)} href="#z" className="text-decoration-none text-reset nav-link-custom">Home</a>
                 <a onClick={() => setSidebarOpen(false)} href="#services" className="text-decoration-none text-reset nav-link-custom">Services</a>
                 <a onClick={() => setSidebarOpen(false)} href="#our-work" className="text-decoration-none text-reset nav-link-custom">Our-Work</a>
                 <a onClick={() => setSidebarOpen(false)} href="#contact-us" className="text-decoration-none text-reset nav-link-custom">Contact Us</a>
